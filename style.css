@@ -1,0 +1,144 @@
+/* body {
+    min-height: 3000px;
+} */
+
+.jumbotron {
+    padding-top: 6rem;
+    background-color: #e2edff;
+    background-image: url(img/bg-hero.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 0 -100px;
+    background-repeat: repeat;
+    color: white;
+}
+
+.jumbotron h1, .jumbotron p {
+    text-shadow: 3px 3px 5px rgba(0,0,200,.5);
+}
+
+.gallery-img {
+    width: 100%;
+}
+
+#gallery .row > * {
+    padding: 0;
+}
+
+.projects {
+    background-color: #e2edff;
+}
+
+section {
+    padding-top: 5rem;
+}
+
+footer {
+    margin-top: -5px;
+}
+
+footer p a {
+    text-decoration: none;
+}
+
+
+/* Section Sepeda box */
+.sepeda-box {
+    position: relative;
+    background-color: #0c6efd;
+    border-radius: 10px;
+    height: 500px;
+    transform-style: preserve-3d;
+}
+
+.sepeda-box::before {
+    content: 'MY';
+    position: absolute;
+    color: white;
+    font-size: 6em;
+    font-weight: bold;
+    font-style: italic;
+    top: 30px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    opacity: 0;
+    transition: .5s;
+}
+
+.sepeda-box:hover::before {
+    /* left: 50%; */
+    opacity: .2;
+}
+
+.sepeda-box::after {
+    content: 'Coffe';
+    position: absolute;
+    color: white;
+    font-size: 4.3em;
+    font-weight: bold;
+    font-style: italic;
+    top: 360px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    opacity: 0;
+    transition: .5s;
+}
+
+.sepeda-box:hover::after {   
+    opacity: .2;
+}
+
+.sepeda-name {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    font-size: 2em;
+    opacity: 0;
+    transform: translate3d(0,0,50px);
+    transition: .5s;
+}
+
+.sepeda-box:hover .sepeda-name {
+    top: 20px;
+    opacity: 1;
+}
+
+.sepeda-detail-button {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate3d(-50%, 0, 50px);
+    opacity: 0;
+    transition: .5s;
+}
+
+.sepeda-box:hover .sepeda-detail-button {
+    opacity: 1;
+    bottom: 15px;
+}
+
+.sepeda-img {
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate3d(-50%, -52%, 100px);
+    width: 150px;
+    transition: .5s;
+}
+
+.sepeda-box:hover .sepeda-img {
+    transform: scale(1.2) rotate(-5deg) translate3d(-50%, -50%, 80px);
+    ;
+}
+
+
+
+
+/* Responsive Breakpoint */
+@media (max-width: 600px) {
+     .jumbotron img {
+        width: 25%;
+    }
+}
